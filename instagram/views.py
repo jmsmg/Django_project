@@ -1,3 +1,4 @@
+from unittest import mock
 from django.views.generic import ListView
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, get_object_or_404
@@ -28,9 +29,11 @@ def post_detail(request: HttpRequest, pk: int) -> HttpResponse:
         'post': post,
     })
 
-    response = HttpResponse()
-    response.write("Hello World")
-    return render(request, 'instagram/post_list.html', {})
+# post_detail = DetailView.as_view(model=Post) 클래스기반 뷰
+
+    # response = HttpResponse()
+    # response.write("Hello World")
+    # return render(request, 'instagram/post_list.html', {})
 
 def archives_year(request, year):
     return HttpResponse(f'{year}년 arhcive')
