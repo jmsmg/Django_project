@@ -17,7 +17,7 @@ app_name = 'instagram' # name space 지정
 
 urlpatterns = [
     path('', views.post_list),
-    # path('<int:pk>/', views.post_detail),
+    path('<int:pk>/', views.post_detail),
     # path('archives/<int:year>/', views.archives_year),
     path('archives/<year:year>/', views.archives_year)
 ]
