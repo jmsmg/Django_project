@@ -18,8 +18,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.views.generic import TemplateView, RedirectView
 
 urlpatterns = [
+    path('', RedirectView.as_view(
+        # url='/instagram/'), 
+        pattern_name='instagram:post_list',
+        ),
+        name='root'), # django는 url보다 패턴 네임을 선호함
     path('admin/', admin.site.urls), # URL Reverse
     path('blog1/', include('blog1.urls')),
     path('instagram/', include('instagram.urls')),
