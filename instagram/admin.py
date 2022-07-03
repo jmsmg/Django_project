@@ -15,7 +15,7 @@ class PostAdmin(admin.ModelAdmin):
 
     def photo_tag(self, post):
         if post.photo:
-            return mark_safe(f'<img src="{post.photo.url}" style="width: 72px" />')
+            return mark_safe(f'<img src="{post.photo.url}" style="width: 72px" />') # mark_safe로 감싸주지 않으면 사진을 노출시키지 않음
         return None
 
     # 모델에서 구현
