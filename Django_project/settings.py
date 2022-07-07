@@ -53,7 +53,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # 디버그 툴바 추가
+    'querycount.middleware.QueryCountMiddleware', # 쿼리 카운트 추가
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,7 +141,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/' # 파일에 대한 URL 접근시 사용
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-INTERNAL_IPS = [
+INTERNAL_IPS = [ # 디버그 화면 가능한 아이피 설정
     '127.0.0.1',
 ]
 
