@@ -8,9 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="get">
-        <input type="text" name="q" value="{{ q }}"/>
-        <input type="submit" value="검색"/>
+    <!-- action="" 주소에 get 방식으로 전달해주는 것 -->
+    <form action="" method="get"> <!-- default는 get이나 명시적으로 표기-->
+        <input type="text" name="q" value="{{ q }}"/> <!-- 검색창 value="{{ q }}는 검색 후 남는 글씨"-->
+        <input type="submit" value="검색"/> <!-- 검색 버튼 -->
     </form>
     <table class="table table-bordered table-hover">
         <tbody>

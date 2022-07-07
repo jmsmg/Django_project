@@ -16,7 +16,7 @@ register_converter(YearConverter, 'year')
 app_name = 'instagram' # name space 지정
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
+    path('', views.post_list, name='post_list'), # views.post_list 호출이 아니라 함수 그 자체를 보내야함
     path('<int:pk>/', views.post_detail),
     # path('archives/<int:year>/', views.archives_year),
     path('archives/<year:year>/', views.archives_year)
