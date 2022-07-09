@@ -145,4 +145,4 @@ INTERNAL_IPS = [ # 디버그 화면 가능한 아이피 설정
     '127.0.0.1',
 ]
 
-AUTH_USER_MODEL = 'auth.User'
+AUTH_USER_MODEL = 'auth.User' # 현재 활성화되고 있는 유저 모델
